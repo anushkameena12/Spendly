@@ -1,14 +1,9 @@
-"use client";
-
-import { SignInButton, SignUpButton, UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
+import { SignInButton, UserButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 import { LayoutDashboard, PenBox } from "lucide-react";
 import { checkUser } from "@/lib/checkUser";
-import { ModeToggle } from "./Modetoggle";
-
-
 
 const Header = async () => {
   await checkUser();
@@ -22,6 +17,7 @@ const Header = async () => {
         height={60}
         width={200}
         className="h-12 w-auto object-contain"
+        priority
         />
         </Link>
         <div className="flex items-center space-x-4">
