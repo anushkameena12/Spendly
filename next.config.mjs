@@ -9,11 +9,9 @@ const nextConfig = {
     ],
   },
 
-  experimental: {
-    serverActions: {
-      bodySizeLimit: "5mb",
-    },
-  },
+  // This forces Vercel to use stable Webpack compilation for production builds
+  // instead of tripping up on Clerk's internal files with Turbopack.
+  productionBrowserSourceMaps: false,
 };
 
 export default nextConfig;
