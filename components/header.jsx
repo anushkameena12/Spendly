@@ -35,8 +35,6 @@ const Header = async () => {
               <span className=" hidden md:inline ">Add Transaction</span>
             </Button>
             </Link>
-
-
           </SignedIn>
 
         <SignedOut>
@@ -51,7 +49,6 @@ const Header = async () => {
             },
            }}/>
         </SignedIn>
-        {/* <ModeToggle/> */}
         </div>
       </nav>
     </div>
