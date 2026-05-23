@@ -23,6 +23,7 @@ const Header = async () => {
         </Link>
         <div className="flex items-center space-x-4">
           <SignedIn>
+            
             <Link href={"/dashboard"} className="text-gray-800 hover:text-green-600 flex items-center gap-2">
             <Button variant="outline">
               <LayoutDashboard size={18}/>
