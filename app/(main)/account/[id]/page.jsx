@@ -7,7 +7,9 @@ import { AccountChart } from "../_components/account-chart";
 import { getAccountWithTransactions } from "@/actions/accounts";
 
 export default async function AccountPage({ params }) {
-  const accountData = await getAccountWithTransactions(params.id);
+  // In Next.js 15+, params is a Promise and MUST be awaited first
+  const resolvedParams = await params;
+  const accountData = await getAccountWithTransactions(resolvedParams.id);
 
   if (!accountData) {
     notFound();
